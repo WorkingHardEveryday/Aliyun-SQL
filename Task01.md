@@ -257,8 +257,8 @@ CREATE TABLE product(
 ### 2.5 命名规则
 
 * 只能使用半角英文字母、数字、下划线（_）作为数据库、表和列的名称
-* 名称必须以半角英文字母开头
-
+* 名称必须以半角英文字母开头 
+**字母数字下划线，中文也可以作表名亦可以开头，但不规范
 商品表和 product 表列名的对应关系
 
 ![ljr70t](https://upiclw.oss-cn-beijing.aliyuncs.com/uPic/ljr70t.jpg)
