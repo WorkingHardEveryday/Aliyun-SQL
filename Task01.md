@@ -20,7 +20,7 @@ DBMS 主要通过数据的保存格式（数据库的种类）来进行分类，
 * 层次数据库（Hierarchical Database，HDB）
 * 关系数据库（Relational Database，RDB）
 
-    这种类型的 DBMS 称为关系数据库管理系统（Relational Database Management System，RDBMS）。比较具有代表性的 RDBMS 有如下 5 种。
+    这种类型的 DBMS 称为关系数据库管理系统（**Relational Database Management System**，RDBMS）。比较具有代表性的 RDBMS 有如下 5 种。
     - Oracle Database：甲骨文公司的 RDBMS
     - SQL Server：微软公司的 RDBMS
     - DB2：IBM 公司的 RDBMS
@@ -69,7 +69,7 @@ DBMS 主要通过数据的保存格式（数据库的种类）来进行分类，
 
 #### 2.1.1 数据库基本概念
 
-数据库是一个以某种有组织的方式存储的数据集合。数据库(database)是保存有组织的数据的容器。数据库管理系统(DBMS)是一种数据库软件，MySQL是一种DBMS，即它是一种数据库软件，作者使用的数据库管理系统是MySQL，除做特别说明外，作者使用的所有数据库软件都为MySQL。
+数据库是一个以某种有组织的方式存储的数据集合。数据库(**database**)是保存有组织的数据的容器。数据库管理系统(DBMS)是一种数据库软件，MySQL是一种DBMS，即它是一种数据库软件，作者使用的数据库管理系统是MySQL，除做特别说明外，作者使用的所有数据库软件都为MySQL。
 
 ![3FW1l8](https://upiclw.oss-cn-beijing.aliyuncs.com/uPic/3FW1l8.jpg)
 表(table) 某种特定类型数据的结构化清单，是一种结构化的文件，可用来存储某种特定类型的数据。
@@ -84,20 +84,17 @@ DBMS 主要通过数据的保存格式（数据库的种类）来进行分类，
 
 ![Ev8crF](https://upiclw.oss-cn-beijing.aliyuncs.com/uPic/Ev8crF.jpg)
 主键(primary key)一列(或一组列)，其值能够唯一标识表中每一行。表中的任何列都可以作为主键，只要它满足以下条件：
-
-任意两行都不具有相同的主键值;
-
-每一行都必须具有一个主键值(主键列不允许NULL 值);
-
-主键列中的值不允许修改或更新;
-
-主键值不能重用(如果某行从表中删除，它的主键不能赋给以后的新行)
+* 任意两行都不具有相同的主键值;
+* 每一行都必须具有一个主键值(主键列不允许NULL 值);
+* 主键列中的值不允许修改或更新;
+* 主键值不能重用(如果某行从表中删除，它的主键不能赋给以后的新行)
+* 主键可以自动增长（若原来有值会自动覆盖）
 
 ![EtQKUx](https://upiclw.oss-cn-beijing.aliyuncs.com/uPic/EtQKUx.jpg)
 
 #### 2.1.2 什么是 SQL
 
-SQL是结构化查询语言(Structured Query Language)的缩写。SQL 是为操作数据库而开发的语言。国际标准化组织（ISO）为 SQL 制定了相应的标准，以此为基准的 SQL 称为标准 SQL（相关信息请参考专栏——标准 SQL 和特定的 SQL）。
+SQL是结构化查询语言(**Structured Query Language**)的缩写。SQL 是为操作数据库而开发的语言。国际标准化组织（ISO）为 SQL 制定了相应的标准，以此为基准的 SQL 称为标准 SQL（相关信息请参考专栏——标准 SQL 和特定的 SQL）。
 
 SQL语句的优点
 
@@ -121,7 +118,7 @@ SQL语句的优点
 
 * DML
 
-    DML（Data Manipulation Language，数据操纵语言） 用来查询或者变更表中的记录。DML 包含以下几种指令。
+    DML（Data Manipulation Language，数据操纵语言） 用来查询或者变更表中的记录。DML 包含以下几种指令。（**增删改查**）
 
     * SELECT ：查询表中的数据
     
