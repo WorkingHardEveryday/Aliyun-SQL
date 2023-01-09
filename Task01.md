@@ -519,7 +519,10 @@ COMMIT;
 ```
 
 ### 2.10 自动增长属性
-
+ **unique是一个限制，使列中每个单元格的值不能重复**
+  **自动增长和默认值都可以在插入行时不赋值，也可以用其它值来代替默认的值**
+  **自动增长中，插入行后按该列数字大小排列，所以可以在表的某个位置中插入行
+  **自动增长是按照自然表的最后一行向后增长，不是上一次插入的位置**
 ![SMjooi](https://upiclw.oss-cn-beijing.aliyuncs.com/uPic/SMjooi.png)
 
 ![TtH4XH](https://upiclw.oss-cn-beijing.aliyuncs.com/uPic/TtH4XH.png)
