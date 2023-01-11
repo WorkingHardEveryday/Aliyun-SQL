@@ -387,7 +387,7 @@ FROM product;
 ```
 
 ### 4.3 常用法则
-
+**AVERAGE不考虑NULL值的单元格，不能把NULL当成0**
 * COUNT 函数的结果根据参数的不同而不同。COUNT(*) 会得到包含 NULL 的数据行数，而 COUNT(< 列名 >) 会得到 NULL 之外的数据行数。
 * 聚合函数会将 NULL 排除在外。但 COUNT(*) 例外，并不会排除 NULL。
 * MAX/MIN 函数几乎适用于所有数据类型的列。SUM/AVG 函数只适用于数值类型的列。
