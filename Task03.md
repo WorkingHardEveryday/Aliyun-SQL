@@ -91,7 +91,7 @@ GROUP BY product_type ;
 #### 3.1.4.2 基于多表的视图
 
 为了学习多表视图，我们再创建一张表，相关代码如下：
-
+**多表联合select*实为两表各行的笛卡尔乘积，where语句的原理是笛卡尔乘积过滤**
 ```sql
 CREATE TABLE shop_product(
     shop_id    CHAR(4)       NOT NULL,
