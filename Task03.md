@@ -371,7 +371,7 @@ WHERE sale_price > (SELECT AVG(sale_price)
                     WHERE p1.product_type =p2.product_type
                     GROUP BY product_type);
 ```
-
+**p1.type=p2.type时，是将两个表进行笛卡尔乘积，之后对p2中每一行的type进行条件过滤，发现在乘积表里有符合项就保留这一行，重复的符合条件则只考虑一次即可**
 可以看出上面这两个语句的区别吗？  
 在第二条 SQL 语句也就是关联子查询中我们将外面的 product 表标记为 p1，将内部的 product 设置为 p2，而且通过 WHERE 语句连接了两个查询。
 
