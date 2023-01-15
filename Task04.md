@@ -1406,6 +1406,7 @@ WHERE SP.product_id = P.product_id AND SP.shop_id = '000A';
 
 找出 product 和 product2 中售价高于 500 的商品的基本信息。
 
+
 ### 练习题 4.2
 
 借助对称差的实现方式, 求 product 和 product2 的交集。
@@ -1413,6 +1414,22 @@ WHERE SP.product_id = P.product_id AND SP.shop_id = '000A';
 ### 练习题 4.3
 
 每类商品中售价最高的商品都在哪些商店有售 ？
+SELECT
+  *
+FROM
+  product as p
+  INNER JOIN shop_product as sp ON p.product_id = sp.product_id
+WHERE
+  (product_type, sale_price) in (
+    SELECT
+      product_type,
+      MAX(sale_price)
+    FROM
+      product as p
+      INNER JOIN shop_product as sp on p.product_id = sp.product_id
+    group by
+      product_type
+  )
 
 ### 练习题 4.4
 
