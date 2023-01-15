@@ -1434,7 +1434,25 @@ WHERE
 ### 练习题 4.4
 
 分别使用内连结和关联子查询每一类商品中售价最高的商品。
-
+SELECT
+  product_name,
+  product_type
+FROM
+  product as p
+WHERE
+  (product_type, sale_price) in (
+    SELECT
+      product_type,
+      MAX(sale_price)
+    FROM
+      product as p
+    group by
+      product_type
+  )
 ### 练习题 4.5
 
 用关联子查询实现：在 `product` 表中，取出 product_id, produc_name, slae_price, 并按照商品的售价从低到高进行排序、对售价进行累计求和。
+SELECT product_id,product_name,sale_price,(SELECT SUM(sale_price)FROM product)as sum_price 
+FROM product 
+ORDER BY sale_price
+
